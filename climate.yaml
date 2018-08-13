@@ -1,0 +1,32 @@
+climate:
+  - platform: mqtt
+    name: Lounge
+    modes:
+      - "off"
+      - fan_only
+      - cool
+      - heat
+      - dry
+      - auto
+    swing_modes:
+      - "On"
+      - "Off"
+    fan_modes:
+      - "Auto"
+      - "Max"
+      - "Normal"
+      - "Min"
+    mode_command_topic: "heatpump/cmnd/mode"
+    temperature_command_topic: "heatpump/cmnd/temp"
+    fan_mode_command_topic: "heatpump/cmnd/fan"
+    swing_mode_command_topic: "heatpump/cmnd/swing"
+    availability_topic: "heatpump/node/state"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    current_temperature_topic: "heatpump/stat/current_temp"
+    mode_state_topic: "heatpump/stat/mode"
+    temperature_state_topic: "heatpump/stat/temp"
+    fan_mode_state_topic: "heatpump/stat/fan"
+    swing_mode_state_topic: "heatpump/stat/swing"
+    max_temp: 31
+    min_temp: 16
